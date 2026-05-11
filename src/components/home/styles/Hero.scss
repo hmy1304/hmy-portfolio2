@@ -1,0 +1,59 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+
+    .inner.hero-inner {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+
+        .tit,
+        .txt,
+        .arrow {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .tit {
+            span {
+                color: #ebebeb;
+            }
+        }
+    
+        p.txt {
+            position: absolute;
+            text-align: right;
+            right: 2rem;
+            bottom: 10rem;
+            color: rgba(255, 255, 255, 0.72);
+    
+            @media screen and (max-width:599px) {
+                font-size: 1.6rem;
+                // width:50%;
+            }
+            @media screen and (max-width:399px) {
+                display: none;
+            }
+        }
+    
+        .arrow {
+            position: absolute;
+            bottom: 3rem;
+            left: calc(50% - 1.5rem);
+            animation: up 1s infinite alternate ease-in-out;
+            color: #fff;
+        }
+    }
+
+    .canvas {
+        position: absolute !important;
+        inset: 0;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 0;
+    }
+}
